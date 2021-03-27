@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+{% extends 'elsysapp/base.html' %}
+{% block content %}
+{% load static %}
+
+<title>Elsys - gruppe 10</title>
+
+
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="{% static 'Forside.jpeg' %}" alt="forside" style="width:100%;height:100%;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-red" title="Go To W3.CSS">Curling resultater</button>
+  </div>
+</div>
+
+
+<!-- Startside -->
+<div class="w3-row-padding w3-center w3-padding-64" id="startside">
+  <h2>CURLING</h2>
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-card">
+      <li class="w3-theme">
+        <p class="w3-xlarge">Sporten</p>
+      </li>
+      <li class="w3-padding-16"> 
+        Curling er en presisjonsidrett som kan minne om boccia eller petanque, men spilles på is med tunge granittsteiner i stedet for plast- eller stålkuler.
+        Det er to lag med fire spillere hver. De bytter på å sende tunge granittsteiner over en isbane med et mål på hver side, også kalt boet.
+      </li>
+      <img src="{% static 'Bukser.png' %}" alt="Bukser" style="width:100%">
+    </ul>
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-card" >
+      <li class="w3-theme-l2">
+        <p class="w3-xlarge">Historie</p>
+      </li>
+      <li class="w3-padding-16">
+        Curling har sin opprinnelse fra Skottland på 1500-tallet, der den eldste kjente curlingstenen  er fra Stirling har inskripsjonen 1511.
+        Spillereglene som ble satt i Skottland er de som fortsatt gjelder i dag.
+        Norges første klubber var Oppdal Curlingklubb og Oslo Curlingklubb som begge ble sitftet i 1954.
+      </li>
+      <img src="{% static 'Historie.png' %}" alt="Historie" style="width:100%">
+    </ul>
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-card">
+      <li class="w3-theme">
+        <p class="w3-xlarge">Regler</p>
+      </li>
+      <li class="w3-padding-16">
+        Spillet går ut på å få flest steiner nærmest sentrum av boet, også kalt knappen, og vinneren er laget med mest poeng etter endt spill. 
+        Hvert lag sender åtte steiner og laget med en stein nærmest knappen vinner runden, laget får poeng per egen stein som ligger nærmest knappen enn motstanderens nærmeste stein. 
+      </li>
+      <img src="{% static 'Regler.png' %}" alt="Regler" style="width:100%">
+    </ul>
+  </div>
+</div>
+
+
+
+<!-- Arbeid Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="arbeid">
+
+<div class="w3-quarter">
+<h2>ARBEIDET VÅRT</h2>
+<p>Curling er en idrett der det er et stort potensiale for teknologi. 
+  I dag er det ingen systemer som automatisk registrerer poengene til hvert lag. 
+  Vi har designet et system som automatisk registrerer hvilken poengbrikke som blir hengt opp og viser dette over på denne nettsiden.</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="{% static 'Tavle.png' %}" alt="Snow" style="width:100%">
+<div class="w3-card w3-white">
+  <div class="w3-container">
+  <h3>Tavlen</h3>
+  <p>I dag henges poengbrikker manuelt opp på en poengtavle, deretter leser en person av og registrerer dette på en nettside.
+    Vårt system bruker fortsatt den manuelle tavlen, men deretter registreres hva som blir hengt opp automatisk. 
+  </p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+  <img src="{% static 'Magneter.png' %}" alt="Lights" style="width:100%">
+<div class="w3-card w3-white">
+  <div class="w3-container">
+  <h3>Magneter</h3>
+  <p>På baksiden av hver poengbrikke er det satt på magneter i en unik rekkefølge for hvert tall. 
+    Magnetene er satt opp på en måte som ligner på binære tall. 
+    Dette gjør at sensorer på baksiden av tavlen vil kunne kjenne igjen hver enkelt brikke.
+  </p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+  <img src="{% static 'Magneter.png' %}" alt="Mountains" style="width:100%">
+<div class="w3-card w3-white">
+  <div class="w3-container">
+  <h3>Sensorer</h3>
+  <p>På baksiden av tavlen er det satt opp sensorer på hver poengplass. 
+    Disse sensorene er av typen Reed Switches som registrer om det er magneter på forsiden.
+    Dette blir deretter registrert på en Rasberry Pi som sender det videre til nettsiden.
+  </p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-red"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+  <h2>TEAMET</h2>
+  <p>Møt teamet vårt:</p>
+  
+  <div class="w3-row"><br>
+  
+  <div class="w3-third">
+    <img src="{% static 'Mamma.png' %}" alt="Mamma" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Cecilie Woetmann Bore</h3>
+    <p>Prosjektleder</p>
+  </div>
+  
+  <div class="w3-third">
+    <img src="{% static 'Tussie.png' %}" alt="Tussie" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Lars Erik Heimen</h3>
+    <p>Systemutvikler</p>
+  </div>
+  
+  <div class="w3-third">
+    <img src="{% static 'Ole.png' %}" alt="Ole" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Jostein Gjesdal</h3>
+    <p>Softwareutvikler</p>
+  </div>
+  
+  <div class="w3-third">
+    <img src="{% static 'Nasse.png' %}" alt="Nasse" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Sandra Marie Maza Larsen</h3>
+    <p>Systemutvikler</p>
+  </div>
+  
+  <div class="w3-third">
+      <img src="{% static 'Tigergutt.png' %}" alt="Tigergutt" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Mohamed Sadou Barry</h3>
+      <p>Softwareutvikler</p>
+  </div>
+  
+  <div class="w3-third">
+    <img src="{% static 'Ru.png' %}" alt="Ru" style="width:45%" class="w3-circle w3-hover-opacity">
+    <h3>Siri Westgård Rusten</h3>
+    <p>Webdesigner</p>
+  </div>
+  
+  
+  </div>
+  </div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="kontakt">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-red w3-bottombar">Kontakt oss</span></div>
+      <p><i class="fa fa-map-marker w3-text-red w3-xlarge"></i>  Trondheim, NTNU Gløshaugen Elektro F</p>
+      <p><i class="fa fa-phone w3-text-red w3-xlarge"></i>  +47 46780670</p>
+      <p><i class="fa fa-envelope-o w3-text-red w3-xlarge"></i>  ceciliwb@stud.ntnu.no</p>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<iframe
+src="https://maps.google.com/maps?q=elektro%20f&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+  width="100%" height="450" frameborder="0" style="border:0"
+  allowfullscreen="">
+</iframe>
+
+{% endblock %}

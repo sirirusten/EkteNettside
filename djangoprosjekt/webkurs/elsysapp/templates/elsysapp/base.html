@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<body id="myPage">
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="{% url 'index' %}" class="w3-bar-item w3-button w3-red"><i class="fa fa-home w3-margin-right"></i>Hjem</a>
+  <a href="{% url 'index' %}#startside" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Curling</a>
+  <a href="{% url 'index' %}#arbeid" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Arbeid</a>
+  <a href="{% url 'index' %}#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="{% url 'index' %}#kontakt" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Kontakt</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Baner <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a href="{% url 'bane1' %}" class="w3-bar-item w3-button">Bane 1</a>
+        <a href="{% url 'bane2' %}" class="w3-bar-item w3-button">Bane 2</a>
+        <a href="{% url 'bane3' %}" class="w3-bar-item w3-button">Bane 3</a>
+        <a href="{% url 'bane4' %}" class="w3-bar-item w3-button">Bane 4</a>
+      </div>
+    </div>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    
+    <a href="{% url 'index' %}#startside" class="w3-bar-item w3-button">Curling</a>
+    <a href="{% url 'index' %}#arbeid" class="w3-bar-item w3-button">Arbeid</a>
+    <a href="{% url 'index' %}#team" class="w3-bar-item w3-button">Team</a>
+    <a href="{% url 'index' %}#kontakt" class="w3-bar-item w3-button">Kontakt</a>
+      <a href="{% url 'bane1' %}" class="w3-bar-item w3-button">Bane 1</a>
+      <a href="{% url 'bane2' %}" class="w3-bar-item w3-button">Bane 2</a>
+      <a href="{% url 'bane3' %}" class="w3-bar-item w3-button">Bane 3</a>
+      <a href="{% url 'bane4' %}" class="w3-bar-item w3-button">Bane 4</a>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-red w3-display-container"> 
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4>Vår ferdige prototype <i class="fa fa-smile-o"></i></h4>
+    </header>
+    
+      <img src="{% static 'HelTavle.png' %}" class="w3-image w3-greyscale-min" style="width:100%;">
+    
+    <footer class="w3-container w3-red">
+      <p>Det er bare å ta kontakt hvis du lurer på noe!</p>
+    </footer>
+  </div>
+</div>
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-red">Lukk
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="https://drive.google.com/drive/folders/1e-vJbS5MZhxl8dVnzAMMvCmdJ4kbtDsb" class="w3-bar-item w3-button">Google Drive</a>
+  <a href="https://en.wikipedia.org/wiki/Reed_switch" class="w3-bar-item w3-button">Reed switch - Wikipedia</a>
+</nav>
+
+
+
+{% block content %}
+
+{% endblock %}
+
+
+ 
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Følg oss</h4>
+  <a class="w3-button w3-large w3-red" href="https://www.facebook.com/elsysNTNU/" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-red" href="https://www.instagram.com/elsysntnu/" title="Google +"><i class="fa fa-instagram"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-red w3-hide-small">Gå til toppen</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>

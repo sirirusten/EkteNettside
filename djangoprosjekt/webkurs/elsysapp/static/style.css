@@ -1,0 +1,30 @@
+table {
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 30px;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    background-color: rgb(59, 55, 55);
+}
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 30px;
+    text-align: center;
+    font-size: 22px;
+    background-color: white;
+}
+
+.skygge {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
