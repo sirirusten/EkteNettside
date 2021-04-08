@@ -17,7 +17,15 @@ def bane1(request):
     f = open('elsysapp/static/Resultater.txt', 'r')
     file_content = f.read()
     f.close()
-    context = {'file_content' : file_content}
+
+    content_list = file_content.split("\n")
+    lagA = content_list[0].split(",")
+    lagB = content_list[1].split(",")
+
+    print(lagA)
+    print(lagB)
+
+    context = {'lagA' : lagA, 'lagB' : lagB}
     return render(request, "elsysapp/bane1.html", context)
 
 def bane2(request):
