@@ -1,5 +1,4 @@
 from django.shortcuts import render
-#from .models import SensorData
 from django.middleware import csrf
 from django.http import QueryDict
 import requests
