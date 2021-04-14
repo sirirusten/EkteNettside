@@ -19,22 +19,18 @@
   <div class="w3-modal-content w3-card-4 w3-animate-top">
     <header class="w3-container w3-red w3-display-container"> 
       <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-red w3-display-topright"><i class="fa fa-remove"></i></span>
-      <h4>Oh snap! We just showed you a modal..</h4>
-      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      <h4>Vår ferdige prototype <i class="fa fa-smile-o"></i></h4>
     </header>
-    <div class="w3-container">
-      <p>Cool huh? Ok, enough teasing around..</p>
-      <p>Go to our <a class="w3-text-red" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-    </div>
+    
+      <img src="{% static 'HelTavle.png' %}" class="w3-image w3-greyscale-min" style="width:100%;">
+    
     <footer class="w3-container w3-red">
-      <p>Modal footer</p>
+      <p>Det er bare å ta kontakt hvis du lurer på noe!</p>
     </footer>
   </div>
 </div>
 
 <!-- Bane -->
-
-
 <div class="w3-container w3-padding-64 w3-theme-l5" id="tabell">
 <table class="skygge">
     <tr>
@@ -50,22 +46,22 @@
     <tr>
       <th style="background-color:rgba(255, 0, 0, 0.932)">Lag A</th>
       <td><img src="{% static 'Hammer.png' %}" alt="Hammer" width="70" height="60" style="vertical-align:middle"></td>
-      <td>{{lagA.0}}</td>
       <td>{{lagA.1}}</td>
       <td>{{lagA.2}}</td>
       <td>{{lagA.3}}</td>
       <td>{{lagA.4}}</td>
       <td>{{lagA.5}}</td>
+      <td>{{lagA.6}}</td>
     </tr>
     <tr>
       <th style="background-color:rgba(233, 229, 10, 0.938)">Lag B</th>
       <td><img src="{% static 'Uten hammer.png' %}" alt="Uten hammer" width="80" height="70" style="vertical-align:middle"></td>
-      <td>{{lagB.0}}</td>
       <td>{{lagB.1}}</td>
       <td>{{lagB.2}}</td>
       <td>{{lagB.3}}</td>
       <td>{{lagB.4}}</td>
       <td>{{lagB.5}}</td>
+      <td>{{lagB.6}}</td>
     </tr>
   </table>
   </div>
