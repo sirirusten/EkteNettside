@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 {% extends 'elsysapp/base.html' %}
-{% block content %}
 {% load static %}
+{% block content %}
+
 
 <title>BANE 1</title>
 <meta http-equiv="refresh" content="10">
@@ -46,22 +47,22 @@
     <tr>
       <th style="background-color:rgba(255, 0, 0, 0.932)">Lag A</th>
       <td><img src="{% static 'Hammer.png' %}" alt="Hammer" width="70" height="60" style="vertical-align:middle"></td>
+      <td>{{lagA.0}}</td>
       <td>{{lagA.1}}</td>
       <td>{{lagA.2}}</td>
       <td>{{lagA.3}}</td>
       <td>{{lagA.4}}</td>
       <td>{{lagA.5}}</td>
-      <td>{{lagA.6}}</td>
     </tr>
     <tr>
       <th style="background-color:rgba(233, 229, 10, 0.938)">Lag B</th>
       <td><img src="{% static 'Uten hammer.png' %}" alt="Uten hammer" width="80" height="70" style="vertical-align:middle"></td>
+      <td>{{lagB.0}}</td>
       <td>{{lagB.1}}</td>
       <td>{{lagB.2}}</td>
       <td>{{lagB.3}}</td>
       <td>{{lagB.4}}</td>
       <td>{{lagB.5}}</td>
-      <td>{{lagB.6}}</td>
     </tr>
   </table>
   </div>
